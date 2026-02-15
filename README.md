@@ -1,6 +1,8 @@
-# Interactive Stereo Depth Filter Tuning Tool
+# DepthAI Python Stereo Depth Filter Tuning Tool
 
 Interactive tool for tuning DepthAI stereo depth parameters in real time. Displays raw and filtered disparity side by side with a trackbar control panel, so you can visually dial in the best settings for your scene.
+
+This was built to help set up OAK-FFC-3P modules for underwater stereo photogrammetry, where the stock cameras, IR projector, and default settings are not viable. We use different camera modules (e.g. larger lenses for better low-light performance) and need to tune parameters for improved range, clarity, and underwater conditions.
 
 **Window 1 — Stereo Depth:** Live side-by-side view of raw (unfiltered) and filtered disparity, both color-mapped with JET colormap.
 
