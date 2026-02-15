@@ -9,6 +9,9 @@ Interactive tool for tuning DepthAI stereo depth parameters in real time. Displa
 - **Yellow** rows affect **both** raw and filtered images (stereo algorithm settings).
 - **Cyan** rows affect the **filtered** image only (post-processing filters).
 
+![Python Depthai Stereo Preview](assets/stereo_preview.png)
+![Python Depthai Stereo Settings](assets/stereo_settings.png)
+
 ## Quick Start
 
 ```bash
