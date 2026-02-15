@@ -4,15 +4,37 @@ Interactive tool for tuning DepthAI stereo depth parameters in real time. Displa
 
 **Window 1 — Stereo Depth:** Live side-by-side view of raw (unfiltered) and filtered disparity, both color-mapped with JET colormap.
 
+![Python Depthai Stereo Preview](assets/stereo_preview.png)
+
 **Window 2 — Filter Controls:** Trackbar sliders for every stereo and filter parameter, plus a color-coded settings readout you can copy into code. Hover over the **(?)** icon next to any setting to see a description of what it does.
+
+![Python Depthai Stereo Settings](assets/stereo_settings.png)
 
 - **Yellow** rows affect **both** raw and filtered images (stereo algorithm settings).
 - **Cyan** rows affect the **filtered** image only (post-processing filters).
 
-![Python Depthai Stereo Preview](assets/stereo_preview.png)
-![Python Depthai Stereo Settings](assets/stereo_settings.png)
+## Quick Setup for DepthAI-Core on Ubuntu
 
-## Quick Start
+### Ubuntu DepthAI-Core Installation
+
+```bash
+sudo apt update && sudo apt install -y
+git clone https://github.com/luxonis/depthai-core.git && cd depthai-core
+python3 -m venv venv
+source venv/bin/activate
+# Installs library and requirements
+python3 examples/python/install_requirements.py
+echo "export OPENBLAS_CORETYPE=ARMV8" >> ~/.bashrc && source ~/.bashrc
+```
+
+### Installing Stereo Tuning Tool
+
+```bash
+cd examples/python/StereoDepth
+git clone git@github.com:roboticsmick/stereo_tuning_depthai_V3.git
+```
+
+### Quick Start
 
 ```bash
 # Default settings (1280x800, subpixel + LR check + extended enabled)
